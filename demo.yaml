@@ -8,3 +8,6 @@
     - name: Print Hello World
       ansible.builtin.debug:
         msg: Hello World
+
+# Run the .yaml file in Ansible, below command used.
+# ansible-playbook -i 172.31.22.64, -e ansible_user=ec2-user -e ansible_password=DevOps321 demo.yaml
