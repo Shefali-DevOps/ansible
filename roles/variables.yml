@@ -10,3 +10,16 @@
         msg: "URL - {{ URL }}"  # same like shell you care accessing variable with prefix $, here Variable will be under {{ }}
         # if the value starts with variable, then it requires quotes And we can use any single or double quotes.
         # Unlike shell, here in ansible single or double quotes does not have any difference
+
+      vars:
+        URL: tasks.example.com
+  roles:
+    - sample
+
+# Variables precedence
+# 1. CLi -e variable
+# 2. tasks
+# 3. roles vars
+# 4. vars_files
+# 5. vars
+# n. roles defaults
