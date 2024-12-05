@@ -3,6 +3,6 @@
   tasks:
     ansible.builtin.shell: id roboshop
     register: out
-
+    ignore_errors: yes
     ansible.builtin.debug:
       msg: user details - {{ out -stdout }}
