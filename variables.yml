@@ -22,3 +22,48 @@
 # 4. vars_files
 # 5. vars
 # n. roles defaults
+
+# Variable types
+# 1. simple variable
+# 2. List
+# 3. Dictionary / Map
+
+- name: Variable type demo
+  hosts: localhost
+  vars:
+    CLASS: devops # plain variable
+    timings: # List
+      - 6am
+      - 7am
+    trainers: # dict / map
+      6am: John
+      7am: Peter
+  tasks:
+    - name: Print
+      ansible.builtin.debug:
+        msg: "{{ CLASS }} - {{ timings[0] }}, trainer - {{ trainers['6am'] }}"
+
+- name: Variable Data types
+  hosts: localhost
+  vars:
+    number1: 10
+    number2: 11.1
+    string1: abc
+    string2: xyz123
+    boolean1: yes
+    boolean2: no
+    boolean3: true
+    boolean4: false
+  tasks:
+    - name: Print
+      ansible.builtin.debug:
+        msg: ""
+
+- name: Retrive the output from previous tasks and store in variable
+  hosts: localhost
+  tasks:
+    - ansible.builtin.shell: uptime
+      register: out
+
+    - ansible.builtin.debug:
+        msg: "{{ out }}"
