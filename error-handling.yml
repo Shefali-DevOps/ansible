@@ -1,8 +1,9 @@
 - name: Error handling
   hosts: localhost
   tasks:
-    ansible.builtin.shell: id roboshop
-    register: out
-    ignore_errors: yes
-    ansible.builtin.debug:
-      msg: user details - {{ out -stdout }}
+    - shell: id roboshop
+      register: out
+      ignore_errors: yes
+
+    - debug:
+        msg: User details - {{ out.stdout }}
