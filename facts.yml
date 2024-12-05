@@ -1,0 +1,8 @@
+- name: facts
+  hosts: localhost
+  tasks:
+    - name: Print Fact
+      ansible.builtin.debug:
+        msg: "{{ ansible_hostname }}"
+
+# all facts can referred here https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html
