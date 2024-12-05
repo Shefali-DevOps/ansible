@@ -11,3 +11,11 @@
         src: hello.txt
         dest: /tmp/h2.txt
 
+# ansible-playbook template.yml -e name=John
+# output of cat /tmp/h1.txt
+#  Hello {{ name }},
+#   Welcome to DevOps Training
+
+# output of cat /tmp/h2.txt
+#  Hello John,
+#   Welcome to DevOps Training
