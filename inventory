@@ -15,7 +15,7 @@ catalogue2.dev.rdevopsb80.online
 # ansible -i inventory <GROUP NAME>
 # default group name is all , Here in this file we create two more groups, Which are FRONTEND and CATALOGUE
 
-# ansible -i inventory all
+# ansible -i inventory all or ansible -i inventory all --list-hosts
 # all matches with - x1 x2  172.168.1.2 172.168.1.3 frontend1.dev.rdevopsb80.online frontend2.dev.rdevopsb80.online   catalogue1.dev.rdevopsb80.online  catalogue2.dev.rdevopsb80.online
 
 # ansible -i inventory FRONTEND
