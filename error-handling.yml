@@ -1,4 +1,4 @@
-- name : Error handling
+- name: Error handling
   hosts: localhost
   tasks:
     ansible.builtin.shell: id roboshop
