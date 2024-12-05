@@ -1,0 +1,8 @@
+- name : Error handling
+  hosts: localhost
+  tasks:
+    ansible.builtin.shell: id roboshop
+    register: out
+
+    ansible.builtin.debug:
+      msg: user details - {{ out -stdout }}
