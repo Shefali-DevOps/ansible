@@ -3,16 +3,16 @@
   tasks:
     - name: Print
       ansible.builtin.debug:
-        msg: "Fruit - {{ item }}"
-        loop:
-          - apple
-          - banana
-          - cherry
+        msg: "Fruit - {{ item}}"
+      loop:
+        - apple
+        - banana
+        - orange
 
-    - name: Print
+    - name: Print with quantity
       ansible.builtin.debug:
-        msg: "Fruit - {{ item ['name']}}, quantity - {{ item.quantity }}"
-        loop:
-          - { name: apple, quantity: 100}
-          - { name: banana, quantity: 100}
-          - { name: cherry, quantity: 100}
+        msg: "Fruit - {{ item['name'] }}, Quantity - {{ item.quantity }}"
+      loop:
+        - { name: apple, quantity: 100}
+        - { name: banana, quantity: 200}
+        - { name: orange, quantity: 300}
