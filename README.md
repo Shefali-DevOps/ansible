@@ -8,3 +8,7 @@
 
 # if we have only one or two server then no need to create file 
 # ansible -i 172.31.22.64, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping
+
+
+# to install harshicorp vault 
+# sudo pip-3.11 install hvac 
