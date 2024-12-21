@@ -1,0 +1,5 @@
+- name: Retrieve Pass
+  hosts: localhost
+  tasks:
+    debug:
+      msg: "{{ lookup('hashi_vault', 'secret=kv/data/test:MYPASS token={{ vault_token }} url=https://vault-internal.shefalidevops.shop:8200 validate_certs=false')}}"
